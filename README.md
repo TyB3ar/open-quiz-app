@@ -1,12 +1,25 @@
-# React + Vite
+# Open Trivia DB Quiz App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Overview
+The Open Trivia DB Quiz App is a React-based application that allows users to test their knowledge by answering trivia questions. The app fetches trivia questions from the Open Trivia Database API and provides an interactive quiz experience.
 
-Currently, two official plugins are available:
+## Features
+- Fetches trivia questions dynamically from the Open Trivia Database API.
+- Multiple categories and difficulty levels to choose from.
+- Responsive design for seamless use on different devices.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Technologies Used
+- **React**: For building the user interface.
+- **JavaScript (ES6+)**: Core programming language.
+- **CSS**: For styling the application.
+- **Open Trivia Database API**: Source of trivia questions.
 
-## Expanding the ESLint configuration
+## How to Run
+1. Clone the repository.
+2. Navigate to the project directory.
+3. Install dependencies using `npm install`.
+4. Start the development server with `npm start`.
+5. Open the app in your browser at `http://localhost:3000`.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+
+Enjoy testing your trivia knowledge!
