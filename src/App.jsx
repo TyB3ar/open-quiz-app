@@ -6,7 +6,6 @@ import Results from './components/Results';
 
 function App() {
     const [currentPage, setCurrentPage] = useState('home');
-    const [selectedQuestion, setSelectedQuestion] = useState('');
     const [userAnswer, setUserAnswer] = useState('');
 
     const handleQuestionSelect = (question) => {
@@ -19,15 +18,20 @@ function App() {
       setCurrentPage('results');
     };
 
+    const handleRestart = () => {
+      setUserAnswer('');
+      setCurrentPage('home');
+    }; 
+
     return (
       <>
         <div className="App">
           {currentPage === 'home' && <HomePage onQuestionSelect={handleQuestionSelect} />}
           {currentPage === 'questionForm' && (
-            <QuestionForm question={selectedQuestion} onAnswerSubmit={handleAnswerSubmit} />
+            <QuestionForm formData={formData} onSubmit={handleAnswerSubmit} />
           )}
           {currentPage === 'results' && (
-            <Results question={selectedQuestion} userAnswer={userAnswer} />
+            <Results firstName={formData.firstName} isCorrect={isCorrect} correctAnswer={correctAnswer} onRestart={handleRestart} />
           )}
         </div>
         <footer>

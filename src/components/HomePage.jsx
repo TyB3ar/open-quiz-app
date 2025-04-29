@@ -43,15 +43,20 @@ function HomePage() {
         console.log("Form submitted successfully. Showing QuestionForm.");
     };
 
+    const handleQuestionSubmit = (selectedAnswer) => {
+        console.log("User submitted:", selectedAnswer);
+        // Additional logic can go here
+    };
+
     if (showQuestionForm) {
-        return <QuestionForm formData={formData} />;
+        return <QuestionForm formData={formData} onSubmit={handleQuestionSubmit} />;
     }
 
     return (
         <div className="home-page">
             <h1>Welcome to the Open Trivia Quiz App</h1>
             <p>Please fill out the form below to start your quiz.</p>
-            <form>
+            <form onSubmit={handleSubmit}>
                 <div>
                     <label htmlFor="firstName">First Name:</label>
                     <input
@@ -72,6 +77,7 @@ function HomePage() {
                     >
                         <option value="">Select a category</option>
                         <option value="9">General Knowledge</option>
+                        <option value="15">Video Games</option>
                         <option value="21">Sports</option>
                         <option value="23">History</option>
                         <option value="27">Animals</option>
@@ -92,7 +98,7 @@ function HomePage() {
                     </select>
                 </div>
                 {error && <p style={{ color: 'red' }} className="error">{error}</p>}
-                <button type="submit" onClick={handleSubmit}>Start Quiz</button>
+                <button type="submit">Start Quiz</button>
 
             </form>
         </div>
