@@ -7,6 +7,12 @@ import Results from './components/Results';
 function App() {
     const [currentPage, setCurrentPage] = useState('home');
     const [userAnswer, setUserAnswer] = useState('');
+    const [SelectedQuestion, setSelectedQuestion] = useState('');
+    const [formData, setFormData] = useState({
+      firstName: "",
+      category: "",
+      difficulty: "",
+  });
 
     const handleQuestionSelect = (question) => {
       setSelectedQuestion(question);
